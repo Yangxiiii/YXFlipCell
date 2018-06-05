@@ -1,5 +1,5 @@
-![header](./header.png)
-<img src="https://github.com/Yangxiiii/YXFlipCell/blob/master/50gif.gif" width="600" height="450" /></a>
+[pic]
+<img src="https://github.com/Yangxiiii/YXFlipCell/blob/master/50gif.gif" width="330" height="661" /></a>
 <br><br/>
 
 # YXFlipCell
