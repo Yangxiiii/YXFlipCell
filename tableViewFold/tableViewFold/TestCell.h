@@ -13,7 +13,7 @@
 
 static CGFloat cellCloseH = 180; //cell折叠之后的高度
 static CGFloat cellOpenH = 440;  //cell展开后的高度
-static NSInteger foldNum = 5;    //折叠次数
+static NSInteger foldNum = 3;    //折叠次数
 
 @interface TestCell : YXFlipCell
 

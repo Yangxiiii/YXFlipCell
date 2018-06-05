@@ -36,11 +36,6 @@
 
 @implementation YXFlipCell
 
-- (void)awakeFromNib {
-    [super awakeFromNib];
-    [self initFunc];
-}
-
 - (instancetype)initWithStyle:(UITableViewCellStyle)style
               reuseIdentifier:(NSString *)reuseIdentifier
             forwardViewHeight:(CGFloat)forwardViewHeight
