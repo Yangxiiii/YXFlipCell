@@ -11,8 +11,9 @@
 #define SWidth [UIScreen mainScreen].bounds.size.width
 #define SHeight [UIScreen mainScreen].bounds.size.height
 
-static CGFloat cellCloseH = 180;
-static CGFloat cellOpenH = 480;
+static CGFloat cellCloseH = 180; //cell折叠之后的高度
+static CGFloat cellOpenH = 440;  //cell展开后的高度
+static NSInteger foldNum = 5;    //折叠次数
 
 @interface TestCell : YXFlipCell
 

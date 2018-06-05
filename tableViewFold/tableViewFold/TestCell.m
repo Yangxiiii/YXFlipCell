@@ -29,11 +29,17 @@
 + (TestCell *)testCellWithTableView:(UITableView *)tableView {
     TestCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TestCell"];
     if (cell == nil) {
+        CGFloat subHeight;
+        if (foldNum == 1) {
+            subHeight = 0;
+        } else {
+            subHeight = (cellOpenH - 20 - (cellCloseH - 20)*2)/(foldNum - 1);
+        }
         cell = [[TestCell alloc] initWithStyle:UITableViewCellStyleDefault
                                reuseIdentifier:@"TestCell"
                              forwardViewHeight:cellCloseH - 20
-                                 subFlipHeight:(cellOpenH - 20 - (cellCloseH - 20)*2)/2
-                                     foldCount:3
+                                 subFlipHeight:subHeight
+                                     foldCount:foldNum
                                      cornerRad:10
                                     paddingAry:@[@10,@30]
                                   reverseColor:[UIColor lightGrayColor]];
@@ -61,7 +67,7 @@
 - (void)setBGColor {
     UIView *view0 = [self viewWithIndex:0];
     view0.backgroundColor = [UIColor orangeColor];
-    for (int i = 0; i < 4; i++) {
+    for (int i = 0; i < foldNum+1; i++) {
         UIView *view = [self viewWithIndex:i+2];
         view.backgroundColor = [UIColor brownColor];
     }
